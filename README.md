@@ -10,12 +10,19 @@ A modular, Object-Oriented JavaScript (OOP) dynamic electronics store catalog an
 
 ---
 
-## 📸 Preview & Highlights
+## 📸 Visual Guide & Interface Walkthrough
 
-- **Dynamic Category Filtering**: Select product categories (*Computers & Laptops*, *Smartphones & Tablets*) with instant DOM re-rendering.
-- **Object-Oriented Architecture**: Clean separation of concerns with dedicated `Item` and `Cart` ES6 classes.
-- **Cart Aggregation & Deduplication**: Adding duplicate products automatically increments line-item quantities rather than creating redundant entries.
-- **Real-Time Badge & Totals**: Header cart badge tracks aggregate quantity count; cart summary dynamically computes grand total using functional array reducers.
+### Dynamic Product Catalog & Real-Time Aggregated Cart
+The user interface features a split-pane layout with category filtering on the left and a live-updating shopping cart summary on the right.
+
+<div align="center">
+  <img src="assets/screenshots/01-catalog-and-cart-overview.png" alt="TechStore Catalog and Shopping Cart Overview" width="850">
+</div>
+
+- **Category Filtering**: Dropdown menu instantly filters between *Computers & Laptops* and *Smartphones & Tablets* without page reloads.
+- **Dynamic Product Rendering**: Cards are programmatically created with high-res thumbnails, product titles, currency-formatted prices, and action buttons.
+- **Live Cart Panel**: Aggregates selected products with multi-quantity tracking (`Gaming Laptop × 1`, `Ultrabook × 1`, `Google Pixel × 1`), itemized prices, and a live-calculated grand total (`Total: $2999.97`).
+- **Header Badge Counter**: Synchronizes immediately with total units in the cart (shown with active badge count of `3`).
 
 ---
 
@@ -74,7 +81,9 @@ classDiagram
 ```text
 techstore-ecommerce/
 ├── assets/
-│   └── images/          # Hardware and consumer electronics product images
+│   ├── images/          # Hardware and consumer electronics product images
+│   └── screenshots/     # UI walkthrough captures and interface showcases
+│       └── 01-catalog-and-cart-overview.png
 ├── css/
 │   └── app.css          # Responsive styling, modern dark theme, and grid rules
 ├── js/
@@ -84,7 +93,7 @@ techstore-ecommerce/
 ├── index.html           # Main store interface
 ├── LICENSE              # MIT License
 ├── .gitignore           # Git ignore rules
-└── README.md            # Project documentation
+└── README.md            # Project documentation & visual guide
 ```
 
 ---
