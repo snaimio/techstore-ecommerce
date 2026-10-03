@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="js/Item.js" defer></script>
+    <script src="js/Cart.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <link rel="stylesheet" href="css/app.css">
+    <title>TechStore — E-Commerce Catalog & Shopping Cart</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>🖥️ TechStore</h1>
+            <div class="cart-icon">
+                <div>🛒</div>
+                <div id="cartCount">0</div>
+            </div>
+        </div>
+    </header>
+    <div id="controls">
+        <select name="categories" id="categoriesList" onchange="loadProducts(this.value);">
+            <option value="">Select a Category</option>
+            <option value="computers">Computers & Laptops</option>
+            <option value="phones">Smartphones & Tablets</option>
+        </select>
+    </div>
+    <div class="main-container">
+        <div id="products">
+            <div class="products-grid">
+                <!-- Products will be added here by js -->
+            </div>
+        </div>
+        <div id="items">
+            <!-- Cart items will be added here by js -->
+        </div>
+    </div>
+</body>
+</html>
